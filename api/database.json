@@ -1,0 +1,21 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "email": "ian@james.com",
+        "name": "Ian James II"
+      },
+      {
+        "id": 2,
+        "email": "Zaniyah@Montes.com",
+        "name": "Zaniyah Montes"
+      }
+    ],
+    "schools": [
+        {
+            "id": 0,
+            "break": "Finish later on."
+        }
+
+    ]
+}
