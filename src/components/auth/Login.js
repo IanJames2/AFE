@@ -5,12 +5,18 @@ import "./Login.css"
 
 
 export const Login = props => {
+    const name = useRef()
     const email = useRef()
     const existDialog = useRef()
     const history = useHistory()
 
-    const existingUserCheck = () => {
-        return fetch(`http://localhost:8088/customers?email=${email.current.value}`)
+    const existingUserCheckName= () => {
+        return fetch(`http://localhost:8088/schools?name=${name.current.value}`)
+            .then(res => res.json())
+            .then(user => user.length ? user[0] : false)
+    }
+    const existingUserCheckEmail= () => {
+        return fetch(`http://localhost:8088/schools?email=${email.current.value}`)
             .then(res => res.json())
             .then(user => user.length ? user[0] : false)
     }
@@ -18,7 +24,7 @@ export const Login = props => {
     const handleLogin = (e) => {
         e.preventDefault()
 
-        existingUserCheck()
+        existingUserCheckEmail()
             .then(exists => {
                 if (exists) {
                     localStorage.setItem("afe_user", exists.id)
@@ -38,8 +44,16 @@ export const Login = props => {
 
             <section>
                 <form className="form--login" onSubmit={handleLogin}>
-                    <h1>Nashville Kennels</h1>
+                    <h1>AFE</h1>
                     <h2>Please sign in</h2>
+                    <fieldset>
+                        <label htmlFor="inputEmail"> Name </label>
+                        <input ref={name} type="name"
+                            id="name"
+                            className="form-control"
+                            placeholder="Name"
+                            required autoFocus />
+                    </fieldset>
                     <fieldset>
                         <label htmlFor="inputEmail"> Email address </label>
                         <input ref={email} type="email"
