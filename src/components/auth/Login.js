@@ -6,7 +6,6 @@ import "./Login.css"
 
 export const Login = props => {
     const email = useRef()
-    const password = useRef()
     const existDialog = useRef()
     const history = useHistory()
 
@@ -22,7 +21,7 @@ export const Login = props => {
         existingUserCheck()
             .then(exists => {
                 if (exists) {
-                    localStorage.setItem("kennel_customer", exists.id)
+                    localStorage.setItem("afe_user", exists.id)
                     history.push("/")
                 } else {
                     existDialog.current.showModal()
