@@ -35,6 +35,18 @@ export const SchoolProvider = (props) => {
         })
           .then(getSchools)
     }
+
+    const updateSchool = (school) => {
+        return fetch(`http://localhost:8088/schools/${school.id}`, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(school)
+        })
+          .then(getSchools)
+      }
+
     /*
         You return a context provider which has the
         `schools` state, `getSchools` function,
@@ -43,7 +55,7 @@ export const SchoolProvider = (props) => {
     */
     return (
         <SchoolContext.Provider value={{
-            schools, getSchools, addSchool, getSchoolById, deleteSchool
+            schools, getSchools, addSchool, getSchoolById, deleteSchool, updateSchool
         }}>
             {props.children}
         </SchoolContext.Provider>
