@@ -10,10 +10,9 @@ export const Afe = () => (
     <>
       <Route
         render={() => {
-          if (sessionStorage.getItem("Afe_user")) {
+          if (localStorage.getItem("afe_user")) {
             return (
               <>
-                <NavBar />
                 <ApplicationViews />
               </>
             )
