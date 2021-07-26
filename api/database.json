@@ -1,32 +1,45 @@
 {
-    "users": [
-      {
-        "id": 1,
-        "email": "ian@james.com",
-        "name": "Ian James II"
-      },
-      {
-        "id": 2,
-        "email": "Zaniyah@Montes.com",
-        "name": "Zaniyah Montes"
-      }
-    ],
-    "schools": [
-        {
-            "id": 1,
-            "userId": 1,
-            "schoolTypeId": 1,
-            "logo": "https://www.universalheli.com/wp-content/uploads/2018/07/logo_embry-riddle.png",
-            "institutionName": "Embry Riddle Aeronautical University Worldwide",
-            "major": "Computer Science",
-            "tuition": 10748,
-            "enrollment_status": false
-        }
-    ],
-    "schoolTypes":[
-      {
-        "id": 1,
-        "name": "University"
-      }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "email": "ian@james.com",
+      "name": "Ian James II"
+    },
+    {
+      "id": 2,
+      "email": "Zaniyah@Montes.com",
+      "name": "Zaniyah Montes"
+    },
+    {
+      "email": "james@bond.com",
+      "name": "James Bond",
+      "id": 3
+    }
+  ],
+  "schools": [
+    {
+      "id": 1,
+      "userId": 1,
+      "schoolTypeId": 1,
+      "logo": "https://www.universalheli.com/wp-content/uploads/2018/07/logo_embry-riddle.png",
+      "institutionName": "Embry Riddle Aeronautical University Worldwide",
+      "major": "Computer Science",
+      "tuition": 10748,
+      "enrollment_status": false
+    }
+  ],
+  "schoolTypes": [
+    {
+      "id": 1,
+      "name": "University"
+    },
+    {
+      "id": 2,
+      "name": "Technical"
+    },
+    {
+      "id": 3,
+      "name": "VetTec"
+    }
+  ]
 }
