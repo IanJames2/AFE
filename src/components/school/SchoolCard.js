@@ -21,6 +21,9 @@ export const SchoolCard = ({ school }) => {
       <div>Annual Tuition: ${school.tuition}</div>
       {/* <div className="school__timestamp">{school.timestamp }</div>      */}
       <button onClick={trashSchool}>Delete This School</button>
+      <button className="clickMe" onClick={() => {history.push(`/schools/url/${school.id}`);}}>
+          See more info on this school
+        </button>
     </section>
   );
 };
