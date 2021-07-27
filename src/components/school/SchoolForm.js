@@ -60,7 +60,7 @@ export const SchoolForm = () => {
         //! PUT
         const upSchoolObjs = {
           id: schoolId,
-          userId: localStorage.getItem("afe_user"),
+          userId: parseInt(localStorage.getItem("afe_user")),
           schoolTypeId: 1,
           logo: school.logo,
           institutionName: school.institutionName,
@@ -73,7 +73,7 @@ export const SchoolForm = () => {
         .then(() => history.push(`/schools/layout/${schoolId}`))
       } else {
         const newSchool = {
-            userId: localStorage.getItem("afe_user"),
+            userId: parseInt(localStorage.getItem("afe_user")),
             schoolTypeId: 1,
             logo: school.logo,
             institutionName: school.institutionName,

@@ -12,6 +12,7 @@ export const SchoolList = () => {
         console.log("SchoolList: UseEffect is being called properly in the browser")
         getSchools()
     }, [])
+    
     return (
   <>
         <h2>List of Schools</h2>
@@ -23,12 +24,15 @@ export const SchoolList = () => {
         >
           Add A School
         </button>
-        <div className="schools">
+        <div className="schools" id="schoolListMapping">
           {schools.map((school) => {
+              if(school.userId === parseInt(localStorage.getItem("afe_user"))) {
             return (<SchoolCard key={school.id} school={school} />
-          );
-        })}
+              );
+          }})
+        }
         </div>
   </>
     );
   }
+  

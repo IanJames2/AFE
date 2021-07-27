@@ -29,7 +29,7 @@
       "enrollment_status": false
     },
     {
-      "userId": "1",
+      "userId": 1,
       "schoolTypeId": 1,
       "logo": "https://www.mtsu.edu/_resources/root_images/mt-logo-mtsu.svg",
       "institutionName": "Middle Tennessee State University",
