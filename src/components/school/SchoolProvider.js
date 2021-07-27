@@ -14,8 +14,8 @@ export const SchoolProvider = (props) => {
     }
 
     const getSchoolById = (id) => {
-        return fetch(`http://localhost:8088/schools/${id}?_expand=user`)
-        .then(res => res.json()) // note we don't set anything on state here. Why?
+        return fetch(`http://localhost:8088/schools/${id}?_expand=user&_expand=schoolType`)
+        .then(res => res.json()) 
     }
 
     const addSchool = schoolObj => {
