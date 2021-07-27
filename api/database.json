@@ -27,6 +27,17 @@
       "tuition": 10748,
       "websiteURL": "https://worldwide.erau.edu/",
       "enrollment_status": false
+    },
+    {
+      "userId": "1",
+      "schoolTypeId": 1,
+      "logo": "https://www.mtsu.edu/_resources/root_images/mt-logo-mtsu.svg",
+      "institutionName": "Middle Tennessee State University",
+      "major": "Computer Science",
+      "tuition": "1,567",
+      "websiteURL": "https://www.mtsu.edu/",
+      "enrollment_status": false,
+      "id": 2
     }
   ],
   "schoolTypes": [

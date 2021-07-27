@@ -60,9 +60,7 @@ export const SchoolForm = () => {
         //! PUT
         const upSchoolObjs = {
           id: schoolId,
-        //   userId: localStorage.setItem("afe_user", schoolId.afe_user),
-          userId: localStorage.setItem("afe_user", school.afe_user),
-        //   userId: parseInt(localStorage.setItem("afe_user")),
+          userId: localStorage.getItem("afe_user"),
           schoolTypeId: 1,
           logo: school.logo,
           institutionName: school.institutionName,
@@ -75,7 +73,7 @@ export const SchoolForm = () => {
         .then(() => history.push(`/schools/layout/${schoolId}`))
       } else {
         const newSchool = {
-            userId: localStorage.setItem("afe_user"),
+            userId: localStorage.getItem("afe_user"),
             schoolTypeId: 1,
             logo: school.logo,
             institutionName: school.institutionName,
