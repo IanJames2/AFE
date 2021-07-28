@@ -9,6 +9,7 @@ import { HomeButton } from "./HomeButton";
 
 export const ApplicationViews = () => {
 
+  /*
   <Route>
     render={() => {
       if (localStorage.getItem("afe_user")) {
@@ -19,6 +20,7 @@ export const ApplicationViews = () => {
     }
   }
   </Route>
+*/
   return (
     <>
 
