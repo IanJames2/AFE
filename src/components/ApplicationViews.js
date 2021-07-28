@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Redirect } from "react-router-dom";
+import { Route } from "react-router-dom";
 import { SchoolList } from "./school/SchoolList";
 import { SchoolForm } from "./school/SchoolForm";
 import { SchoolDetail } from "./school/SchoolDetail";
@@ -8,6 +8,19 @@ import { Logout } from "./Logout";
 import { HomeButton } from "./HomeButton";
 
 export const ApplicationViews = () => {
+
+  /*
+  <Route>
+    render={() => {
+      if (localStorage.getItem("afe_user")) {
+        return (
+        window.location.reload()
+        )
+      }
+    }
+  }
+  </Route>
+*/
   return (
     <>
 
@@ -29,6 +42,7 @@ export const ApplicationViews = () => {
         <Route path="/schools/layout/:schoolId(\d+)">
           <Logout></Logout>
           <HomeButton></HomeButton>
+
           <SchoolForm></SchoolForm>
         </Route>
       </SchoolProvider>
