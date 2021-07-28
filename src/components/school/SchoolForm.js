@@ -61,7 +61,7 @@ export const SchoolForm = () => {
         const upSchoolObjs = {
           id: schoolId,
           userId: parseInt(localStorage.getItem("afe_user")),
-          schoolTypeId: 1,
+          schoolTypeId: parseInt(school.schoolTypeId),
           logo: school.logo,
           institutionName: school.institutionName,
           major: school.major,
@@ -70,15 +70,15 @@ export const SchoolForm = () => {
           enrollment_status: false
         }
         updateSchool(upSchoolObjs)
-        .then(() => history.push(`/schools/layout/${schoolId}`))
+        .then(() => history.push(`/schools/url/${schoolId}`))
       } else {
         const newSchool = {
             userId: parseInt(localStorage.getItem("afe_user")),
-            schoolTypeId: 1,
+            schoolTypeId: parseInt(school.schoolTypeId),
             logo: school.logo,
             institutionName: school.institutionName,
             major: school.major,
-            tuition: school.tuition,
+            tuition: parseInt(school.tuition),
             websiteURL: school.websiteURL,
             enrollment_status: false
           }
