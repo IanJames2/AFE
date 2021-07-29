@@ -2,7 +2,6 @@ import React, { useContext, useEffect, useState } from "react";
 import { SchoolContext } from "./SchoolProvider";
 import "./School.css";
 import { useParams, useHistory } from "react-router-dom";
-import { render } from "@testing-library/react";
 
 export const SchoolDetail = () => {
   const { getSchoolById, deleteSchool } = useContext(SchoolContext);
