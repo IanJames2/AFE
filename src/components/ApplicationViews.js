@@ -9,19 +9,6 @@ import { Logout } from "./Logout";
 import { HomeButton } from "./HomeButton";
 
 export const ApplicationViews = () => {
-  /*
-  <Route>
-    render={() => {
-      if (localStorage.getItem("afe_user")) {
-        return (
-        window.location.reload()
-        )
-      }
-    }
-  }
-  </Route>
-*/
-
   return (
     <>
       <SchoolTypeProvider>

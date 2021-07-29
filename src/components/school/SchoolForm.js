@@ -9,7 +9,7 @@ export const SchoolForm = () => {
   const { addSchool, updateSchool, getSchoolById } = useContext(SchoolContext);
   const { schoolTypes, getSchoolTypes } = useContext(SchoolTypeContext);
 
-  // const schoolTypeArray = getSchoolTypes()
+
 
   const [school, setSchool] = useState({
     schoolTypeId: 0,
@@ -28,9 +28,9 @@ export const SchoolForm = () => {
 
   useEffect(() => {
     console.log("USE EFFECT!!!!!!!!!!!!!!!!")
+    getSchoolTypes()
     {
       if (schoolId) {
-        // getSchoolById(schoolId).then(getSchoolTypes()).then((school) => {
         getSchoolById(schoolId).then((school) => {
           setSchool(school);
           setIsLoading(false);
