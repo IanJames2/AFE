@@ -14,9 +14,9 @@ export const SchoolCard = ({ school }) => {
 
   return (
     <section className="school">
-      <h3 className="schools">
-        <a href={school.websiteURL}>{school.institutionName}</a>
-      </h3>
+        <h3 className="school">
+          {school.institutionName}
+        </h3>
       <div className="school_major">Field of Study: {school.major}</div>
       <div>Annual Tuition: ${school.tuition}</div>
       {/* <div className="school__timestamp">{school.timestamp }</div>      */}
