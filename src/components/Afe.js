@@ -1,32 +1,35 @@
-import React from "react"
-import { Route, Redirect } from "react-router-dom"
-import { ApplicationViews } from "./ApplicationViews"
-import { Login } from "./auth/Login"
-import { Register } from "./auth/Register"
-import "./Afe.css"
+import React from "react";
+import { Route, Redirect } from "react-router-dom";
+import { ApplicationViews } from "./ApplicationViews";
+import { Logout } from "./Logout";
+import { Login } from "./auth/Login";
+import { Register } from "./auth/Register";
+import { Logo } from "./Logo";
+import "./Afe.css";
 
 export const Afe = () => (
-    <>
-      <Route
-        render={() => {
-          if (localStorage.getItem("afe_user")) {
-            return (
-              <>
-                <ApplicationViews />
-              </>
-            )
-          } else {
-            return <Redirect to="/login" />;
-          }
-        }}
-      />
-  
-      <Route path="/login">
-        <Login />
-      </Route>
-      <Route path="/register">
-        <Register />
-      </Route>
-    </>
-  )
-  
+  <>
+    <Route
+      render={() => {
+        if (localStorage.getItem("afe_user")) {
+          return (
+            <>
+              <Logo />
+              <Logout />
+              <ApplicationViews />
+            </>
+          );
+        } else {
+          return <Redirect to="/login" />;
+        }
+      }}
+    />
+
+    <Route path="/login">
+      <Login />
+    </Route>
+    <Route path="/register">
+      <Register />
+    </Route>
+  </>
+);

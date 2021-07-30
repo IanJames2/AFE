@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+.afe_logo {
+  align-items: left;
+}
