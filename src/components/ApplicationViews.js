@@ -6,16 +6,24 @@ import { SchoolDetail } from "./school/SchoolDetail";
 import { SchoolProvider } from "./school/SchoolProvider";
 import { SchoolTypeProvider } from "./school/SchoolTypeProvider";
 import { HomeButton } from "./HomeButton";
-import { IfSchoolListIsBlank } from "./school/IfSchoolListIsBlank";
 
 export const ApplicationViews = () => {
+  <Route>
+    render={() => {
+      if (localStorage.getItem("afe_user")) {
+        return (
+        window.location.reload()
+        )
+      }
+    }
+  }
+  </Route>
   return (
     <>
       <SchoolTypeProvider>
         <SchoolProvider>
           <Route exact path="/">
             <SchoolList></SchoolList>
-            <IfSchoolListIsBlank></IfSchoolListIsBlank>
           </Route>
           <Route path="/add_a_school">
             <HomeButton></HomeButton>
