@@ -92,7 +92,7 @@ export const SchoolForm = () => {
           enrollment_status: false,
         };
         //! ADD
-        addSchool(newSchool).then(() => history.push("/home"));
+        addSchool(newSchool).then(() => history.push("/"));
       }
     }
   };

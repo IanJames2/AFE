@@ -14,7 +14,7 @@ export const ApplicationViews = () => {
     <>
       <SchoolTypeProvider>
         <SchoolProvider>
-          <Route exact path="/home">
+          <Route exact path="/">
             <Logout></Logout>
             <SchoolList></SchoolList>
             <IfSchoolListIsBlank></IfSchoolListIsBlank>

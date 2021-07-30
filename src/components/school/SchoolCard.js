@@ -8,7 +8,7 @@ export const SchoolCard = ({ school }) => {
   const history = useHistory();
   const trashSchool = () => {
     deleteSchool(school.id).then(() => {
-      history.push("/home");
+      history.push("/");
     });
   };
 

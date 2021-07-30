@@ -15,7 +15,7 @@ export const SchoolDetail = () => {
 
   const deleteSchoolInvoked = () => {
     deleteSchool(school.id).then(() => {
-      history.push("/home");
+      history.push("/");
     });
   };
   
