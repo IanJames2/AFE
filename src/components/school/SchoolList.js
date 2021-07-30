@@ -16,7 +16,7 @@ export const SchoolList = () => {
     
     return (
   <>
-        <h2>List of Schools</h2>
+        <h2>List of Schools For Consideration</h2>
         <button
           className="clickMe"
           onClick={() => {

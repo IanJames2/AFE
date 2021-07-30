@@ -19,18 +19,21 @@ h2 {
 }
 
 .school_major {
-    color: #634c13;
+    color: #ebebee;
 }
 
 .school_cost {
-    color: #634c13;
+    color: #ebebee;
 }
 
 a:link {
-    color: #634c13;
+    color: #ebebee;
 }
 
 .school__schoolName {
-    color: rgb(0, 0, 128);
-
+    color: lightgoldenrodyellow;
 }
+
+section {
+    background-color: rgb(41, 46, 15);
+  }

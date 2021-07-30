@@ -6,7 +6,7 @@
     font-size: 1rem;
 }
 
-button {
+.home__button {
     margin: 1rem 0 2rem 2rem;
     padding: 0.5rem;
     background-color: #0d023f;
@@ -14,3 +14,22 @@ button {
     font-size: 1rem;
 }
 
+.school__schoolTypeId {
+    color: #ebebee;
+}
+
+.school__major {
+    color: #ebebee;
+}
+
+.school__tuition {
+    color: #ebebee;
+}
+
+.school__creator {
+    color: #ebebee;
+}
+
+section {
+    background-color: rgb(41, 46, 15);
+  }
