@@ -4,8 +4,10 @@ import { SchoolList } from "./school/SchoolList";
 import { SchoolForm } from "./school/SchoolForm";
 import { SchoolDetail } from "./school/SchoolDetail";
 import { SchoolProvider } from "./school/SchoolProvider";
+import { UserProvider } from "./userprovider/UserProvider";
 import { SchoolTypeProvider } from "./school/SchoolTypeProvider";
 import { HomeButton } from "./HomeButton";
+import { SchoolApplied } from "./school/SchoolApplied";
 
 export const ApplicationViews = () => {
   <Route>
@@ -20,6 +22,7 @@ export const ApplicationViews = () => {
   </Route>
   return (
     <>
+    <UserProvider>
       <SchoolTypeProvider>
         <SchoolProvider>
           <Route exact path="/">
@@ -37,8 +40,12 @@ export const ApplicationViews = () => {
             <HomeButton></HomeButton>
             <SchoolForm></SchoolForm>
           </Route>
+          <Route path="schools/applied">
+            <SchoolApplied></SchoolApplied>
+          </Route>
         </SchoolProvider>
       </SchoolTypeProvider>
+      </UserProvider>
     </>
   );
 };

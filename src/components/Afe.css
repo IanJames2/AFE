@@ -1,7 +1,7 @@
 .logout_button {
     margin: 1rem 0 2rem 2rem;
     padding: 0.5rem;
-    background-color: #0d023f;
+    background-color: #07050f;
     color: lightgoldenrodyellow;
     font-size: 1rem;
 }
@@ -9,7 +9,7 @@
 .home__button {
     margin: 1rem 0 2rem 2rem;
     padding: 0.5rem;
-    background-color: #0d023f;
+    background-color: #0a090f;
     color: lightgoldenrodyellow;
     font-size: 1rem;
 }
@@ -31,5 +31,5 @@
 }
 
 section {
-    background-color: rgb(41, 46, 15);
+    background-color: rgb(9, 10, 4);
   }
