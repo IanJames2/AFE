@@ -7,15 +7,17 @@ import { SchoolProvider } from "./school/SchoolProvider";
 import { SchoolTypeProvider } from "./school/SchoolTypeProvider";
 import { Logout } from "./Logout";
 import { HomeButton } from "./HomeButton";
+import { IfSchoolListIsBlank } from "./school/IfSchoolListIsBlank";
 
 export const ApplicationViews = () => {
   return (
     <>
       <SchoolTypeProvider>
         <SchoolProvider>
-          <Route exact path="/home">
+          <Route exact path="/">
             <Logout></Logout>
             <SchoolList></SchoolList>
+            <IfSchoolListIsBlank></IfSchoolListIsBlank>
           </Route>
           <Route path="/add_a_school">
             <Logout></Logout>
@@ -30,7 +32,6 @@ export const ApplicationViews = () => {
           <Route path="/schools/layout/:schoolId(\d+)">
             <Logout></Logout>
             <HomeButton></HomeButton>
-
             <SchoolForm></SchoolForm>
           </Route>
         </SchoolProvider>
