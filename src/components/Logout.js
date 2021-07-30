@@ -9,7 +9,7 @@ export const Logout = () => {
 
     return (
         <div>
-            <Link to="/"><button onClick={clearUser}>Logout</button></Link>
+            <Link to="/"><button onClick={clearUser} className="logout_button">Logout</button></Link>
         </div>
     )
 }

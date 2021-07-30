@@ -6,7 +6,6 @@ import { SchoolDetail } from "./school/SchoolDetail";
 import { SchoolProvider } from "./school/SchoolProvider";
 import { SchoolTypeProvider } from "./school/SchoolTypeProvider";
 import { HomeButton } from "./HomeButton";
-import { IfSchoolListIsBlank } from "./school/IfSchoolListIsBlank";
 
 export const ApplicationViews = () => {
   return (
@@ -15,7 +14,6 @@ export const ApplicationViews = () => {
         <SchoolProvider>
           <Route exact path="/">
             <SchoolList></SchoolList>
-            <IfSchoolListIsBlank></IfSchoolListIsBlank>
           </Route>
           <Route path="/add_a_school">
             <HomeButton></HomeButton>

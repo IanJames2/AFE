@@ -1,0 +1,36 @@
+h2 {
+    color: rgb(0, 0, 128);
+}
+
+.clickMe {
+    margin: 1rem 0 2rem 2rem;
+    padding: 0.5rem;
+    background-color: #0d023f;
+    color: lightgoldenrodyellow;
+    font-size: 1rem;
+}
+
+.delete_button {
+    margin: 1rem 0 2rem 2rem;
+    padding: 0.5rem;
+    background-color: #B22222;
+    color: lightgoldenrodyellow;
+    font-size: 1rem;
+}
+
+.school_major {
+    color: #634c13;
+}
+
+.school_cost {
+    color: #634c13;
+}
+
+a:link {
+    color: #634c13;
+}
+
+.school__schoolName {
+    color: rgb(0, 0, 128);
+
+}
