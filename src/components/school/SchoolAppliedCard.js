@@ -1,19 +1,62 @@
-import React, { useContext } from "react";
-import { useHistory } from "react-router-dom";
-import { SchoolContext } from "./SchoolProvider";
-import { Link } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { useHistory, Link, useParams } from "react-router-dom";
+import { SchoolAppliedContext } from "../school/SchoolAppliedProvider";
 
 
 export const SchoolAppliedCard = ({ school }) => {
-    const { schools, getSchools } = useContext(SchoolContext);
-
-  const { deleteSchool } = useContext(SchoolContext);
+  const { addAppliedSchool } = useContext(SchoolAppliedContext);
+  const { deleteSchool } = useContext(SchoolAppliedContext);
   const history = useHistory();
   const trashSchool = () => {
     deleteSchool(school.id).then(() => {
       history.push("/");
     });
   };
+
+  const [appliedSchools ] = useState({
+    schoolId: 0,
+    applied: true
+  });
+
+  const { appliedSchoolId } = useParams(); //* Is an object
+
+  const appliedSchool = { ...appliedSchools };
+
+  const SubmitHandler = () => {
+  //   if (
+  //     appliedSchool.schoolId === "" ||
+  //     appliedSchool.applied === "" 
+  //   ) {
+  //     window.alert(
+  //       "Please make sure every field has a value. This is for your own good!"
+  //     );
+  //   } else {
+  //     setIsLoading(true); 
+  //     if (schoolId) {
+  //       const newAppliedSchool = {
+  //         schoolId: parseInt(appliedSchool.schoolId),
+  //         applied: true
+  //       };
+  //       addAppliedSchool(newAppliedSchool).then(() => history.push("/schools/applied"));
+  //     }
+  //   }
+  // };
+
+  if (
+    appliedSchool.schoolId === "" ||
+    appliedSchool.applied === "" 
+    ) {
+      if (appliedSchoolId) { 
+        //! ADD
+      const newAppliedSchool = {
+        schoolId: parseInt(appliedSchool.schoolId),
+        applied: true
+      }
+      addAppliedSchool(newAppliedSchool).then(() => history.push("/schools/applied"));
+      }
+  }
+}
+
 
   return (
     <section className="school">
@@ -32,7 +75,7 @@ export const SchoolAppliedCard = ({ school }) => {
         </a>
       </div>
       <div className="school_enrollment">
-        Enrollment Status: ${school.enrollment_status}
+        Enrollment Status: {school.enrollment_status}
       </div>
       {/* <div className="school__timestamp">{school.timestamp }</div>      */}
       <button className="delete_button" onClick={trashSchool}>
@@ -41,6 +84,7 @@ export const SchoolAppliedCard = ({ school }) => {
       <button
         className="clickMe"
         onClick={() => {
+          SubmitHandler();
           history.push(`/`);
         }}
       >

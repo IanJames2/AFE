@@ -53,5 +53,12 @@
       "id": 3,
       "name": "VetTec"
     }
+  ],
+  "appliedSchools": [
+    {
+      "id": 1,
+      "schoolId": 1,
+      "applied": true 
+    }
   ]
 }

@@ -1,8 +1,7 @@
 import React, { useContext } from "react";
 import "./School.css";
 import { SchoolContext } from "./SchoolProvider";
-import { Link } from "react-router-dom";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 export const SchoolCard = ({ school }) => {
   const { deleteSchool } = useContext(SchoolContext);

@@ -4,7 +4,6 @@ import { SchoolTypeContext } from "../school/SchoolTypeProvider";
 import "./School.css";
 import { useHistory, useParams } from "react-router-dom";
 
-//TODO:SchoolType needs a dropdown. Circle back to this!
 export const SchoolForm = () => {
   const { addSchool, updateSchool, getSchoolById } = useContext(SchoolContext);
   const { schoolTypes, getSchoolTypes } = useContext(SchoolTypeContext);
@@ -201,7 +200,7 @@ export const SchoolForm = () => {
       </fieldset>
       <button
         className="btn btn-primary"
-        disabled={isLoading} //?What is this? Look it up later
+        disabled={isLoading} 
         onClick={(school) => {
           school.preventDefault();
           SubmitHandler();
