@@ -22,26 +22,7 @@ export const SchoolAppliedCard = ({ school }) => {
 
   const appliedSchool = { ...appliedSchools };
 
-  const SubmitHandler = () => {
-  //   if (
-  //     appliedSchool.schoolId === "" ||
-  //     appliedSchool.applied === "" 
-  //   ) {
-  //     window.alert(
-  //       "Please make sure every field has a value. This is for your own good!"
-  //     );
-  //   } else {
-  //     setIsLoading(true); 
-  //     if (schoolId) {
-  //       const newAppliedSchool = {
-  //         schoolId: parseInt(appliedSchool.schoolId),
-  //         applied: true
-  //       };
-  //       addAppliedSchool(newAppliedSchool).then(() => history.push("/schools/applied"));
-  //     }
-  //   }
-  // };
-
+  const DeleteHandler = () => {
   if (
     appliedSchool.schoolId === "" ||
     appliedSchool.applied === "" 
@@ -84,7 +65,7 @@ export const SchoolAppliedCard = ({ school }) => {
       <button
         className="clickMe"
         onClick={() => {
-          SubmitHandler();
+          DeleteHandler();
           history.push(`/`);
         }}
       >
