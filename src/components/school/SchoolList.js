@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom';
 import "./School.css";
 
 export const SchoolList = () => {
-    const { schools, getSchools,  } = useContext(SchoolContext)
+    const { schools, getSchools  } = useContext(SchoolContext)
 
     const history = useHistory()
 

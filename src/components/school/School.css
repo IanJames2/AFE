@@ -1,19 +1,19 @@
 h2 {
-    color: rgb(0, 0, 128);
+    color: rgb(15, 15, 17);
 }
 
 .clickMe {
     margin: 1rem 0 2rem 2rem;
     padding: 0.5rem;
-    background-color: #0d023f;
-    color: lightgoldenrodyellow;
+    background-color: #030208;
+    color: rgb(235, 237, 245);
     font-size: 1rem;
 }
 
 .delete_button {
     margin: 1rem 0 2rem 2rem;
     padding: 0.5rem;
-    background-color: #B22222;
+    background-color: #0c0b0b;
     color: lightgoldenrodyellow;
     font-size: 1rem;
 }
@@ -35,5 +35,5 @@ a:link {
 }
 
 section {
-    background-color: rgb(41, 46, 15);
+    background-color: rgb(11, 12, 6);
   }
