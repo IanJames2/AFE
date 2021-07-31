@@ -60,5 +60,12 @@
       "schoolId": 1,
       "applied": true 
     }
+  ],
+  "notes": [
+    {
+      "id": 1,
+      "schoolId": 1,
+      "content": "I am struggling with these stretch goals..."
+    }
   ]
 }
