@@ -207,11 +207,4 @@ export const SchoolForm = () => {
   );
 };
 
-/*
-- 2
-- https://www.mtsu.edu/_resources/root_images/mt-logo-mtsu.svg
-- Middle Tennessee State University
-- Computer Science
-- 1,567
-- https://www.mtsu.edu/
-  */
+

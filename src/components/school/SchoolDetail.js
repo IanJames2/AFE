@@ -31,7 +31,7 @@ export const SchoolDetail = () => {
     <section className="school">
       <h3 className="school__schoolName">{school.institutionName}</h3>
       <div className="school__logo">
-        <a href={school.websiteURL}><img  src={school.logo} alt="images/AFE.png" width="150px" height="150px"></img></a>      
+        <a href={school.websiteURL}><img  src={school.logo} alt="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fatlantic-speed.com%2Fimages%2FF198648690.jpg&f=1&nofb=1" width="150px" height="150px"></img></a>      
       </div>
       <div className="school__schoolTypeId">
         School Type: {school.schoolType.name}

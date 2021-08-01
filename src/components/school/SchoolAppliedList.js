@@ -1,19 +1,16 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./School.css";
 import { SchoolAppliedContext } from "../school/SchoolAppliedProvider";
 import { SchoolAppliedCard } from "./SchoolAppliedCard";
 
-
 export const SchoolAppliedList = () => {
   const { appliedSchools, getAppliedSchools } = useContext(SchoolAppliedContext);
 
-
   useEffect(() => {
-    console.log(
-      "SchoolList: UseEffect is being called properly in the browser"
-    );
+      console.log("AppliedSchoolList: UseEffect is being called properly in the browser");
     getAppliedSchools();
-  }, []);
+    }, []);
+
 
   return (
     <>
@@ -24,7 +21,7 @@ export const SchoolAppliedList = () => {
       ) ? (
         ""
         ) : (
-        <p>Apply to at least one school to have a chance of getting your degree</p>
+        <p>Once you have applied to a school, you can add that school to your applied schools list.</p>
       )}
       <div className="schools" id="schoolListMapping">
         {appliedSchools.map((school) => {

@@ -1,42 +1,19 @@
-import React, { useContext, useState } from "react";
-import { useHistory, Link, useParams } from "react-router-dom";
-import { SchoolAppliedContext } from "../school/SchoolAppliedProvider";
+import React, { useContext } from "react";
+import { useHistory, Link } from "react-router-dom";
+import { SchoolAppliedContext } from "./SchoolAppliedProvider";
 
-
-export const SchoolAppliedCard = ({ school }) => {
-  const { addAppliedSchool } = useContext(SchoolAppliedContext);
-  const { deleteSchool } = useContext(SchoolAppliedContext);
+export const SchoolAppliedCard = ({ school, appliedSchool }) => {
+  const { deleteAppliedSchool } = useContext(SchoolAppliedContext);
   const history = useHistory();
-  const trashSchool = () => {
-    deleteSchool(school.id).then(() => {
-      history.push("/");
+
+  //! School and appliedSchools is undefined in this module!!! 😩😩😩😩😩
+
+  //!Cannot read id of undefined!!!!! 😩😩😩😩😩
+  const DeleteHandler = () => {
+    deleteAppliedSchool(appliedSchool.id).then(() => {
+      history.push("/schools/applied");
     });
   };
-
-  const [appliedSchools ] = useState({
-    schoolId: 0,
-    applied: true
-  });
-
-  const { appliedSchoolId } = useParams(); //* Is an object
-
-  const appliedSchool = { ...appliedSchools };
-
-  const DeleteHandler = () => {
-  if (
-    appliedSchool.schoolId === "" ||
-    appliedSchool.applied === "" 
-    ) {
-      if (appliedSchoolId) { 
-        //! ADD
-      const newAppliedSchool = {
-        schoolId: parseInt(appliedSchool.schoolId),
-        applied: true
-      }
-      addAppliedSchool(newAppliedSchool).then(() => history.push("/schools/applied"));
-      }
-  }
-}
 
 
   return (
@@ -49,7 +26,7 @@ export const SchoolAppliedCard = ({ school }) => {
         <a href={school.websiteURL}>
           <img
             src={school.logo}
-            alt="images/AFE.png"
+            alt="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fatlantic-speed.com%2Fimages%2FF198648690.jpg&f=1&nofb=1"
             width="150px"
             height="150px"
           ></img>
@@ -58,17 +35,9 @@ export const SchoolAppliedCard = ({ school }) => {
       <div className="school_enrollment">
         Enrollment Status: {school.enrollment_status}
       </div>
-      {/* <div className="school__timestamp">{school.timestamp }</div>      */}
-      <button className="delete_button" onClick={trashSchool}>
-        Delete This School
-      </button>
       <button
         className="clickMe"
-        onClick={() => {
-          DeleteHandler();
-          history.push(`/`);
-        }}
-      >
+        onClick={DeleteHandler}>
         Click Here To Move This School To Your School Draft List
       </button>
     </section>

@@ -5,6 +5,7 @@ import { Logout } from "./Logout";
 import { Login } from "./auth/Login";
 import { Register } from "./auth/Register";
 import { Logo } from "./Logo";
+import { NavBar } from "./nav/NavBar";
 import "./Afe.css";
 
 export const Afe = () => (
@@ -14,7 +15,7 @@ export const Afe = () => (
         if (localStorage.getItem("afe_user")) {
           return (
             <>
-              <Logo />
+              <NavBar></NavBar>
               <Logout />
               <ApplicationViews />
             </>

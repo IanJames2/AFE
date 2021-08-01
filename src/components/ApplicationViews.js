@@ -29,15 +29,12 @@ export const ApplicationViews = () => {
                 <SchoolList></SchoolList>
               </Route>
               <Route path="/add_a_school">
-                <HomeButton></HomeButton>
                 <SchoolForm></SchoolForm>
               </Route>
               <Route path="/schools/url/:schoolId(\d+)">
-                <HomeButton></HomeButton>
                 <SchoolDetail></SchoolDetail>
               </Route>
               <Route path="/schools/layout/:schoolId(\d+)">
-                <HomeButton></HomeButton>
                 <SchoolForm></SchoolForm>
               </Route>
               <Route path="/schools/applied">

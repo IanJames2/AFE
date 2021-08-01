@@ -21,11 +21,11 @@
       "id": 1,
       "userId": 1,
       "schoolTypeId": 1,
-      "logo": "https://www.universalheli.com/wp-content/uploads/2018/07/logo_embry-riddles.png",
+      "logo": "https://adfontes.com/wp-content/uploads/2020/07/Embry-Riddle-Aeronautical-University-Logo-2.jpg",
       "institutionName": "Embry Riddle Aeronautical Worldwide",
       "major": "Computer Science",
       "tuition": "15000",
-      "websiteURL": "https://worldwide.erau.edu/class",
+      "websiteURL": "https://worldwide.erau.edu/",
       "enrollment_status": false
     },
     {
@@ -58,6 +58,7 @@
     {
       "id": 1,
       "schoolId": 1,
+      "userId": 1,
       "applied": true 
     }
   ],
