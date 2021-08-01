@@ -15,21 +15,21 @@
 }
 
 .school__schoolTypeId {
-    color: #ebebee;
+    color: rgb(15, 15, 17);
 }
 
 .school__major {
-    color: #ebebee;
+    color: rgb(15, 15, 17);
 }
 
 .school__tuition {
-    color: #ebebee;
+    color: rgb(15, 15, 17);
 }
 
 .school__creator {
-    color: #ebebee;
+    color: rgb(15, 15, 17);
 }
 
 section {
-    background-color: rgb(9, 10, 4);
+    background-color: rgb(255, 255, 255);
   }

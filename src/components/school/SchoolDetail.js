@@ -40,7 +40,7 @@ export const SchoolDetail = () => {
       <div className="school__tuition">
         Annual Cost of School: ${school.tuition}
       </div>
-      <div className="school__creator">Inquired by: {school.user?.name}</div>
+      <div className="school__creator">Added by: {school.user?.name}</div>
       <button className="delete_button" onClick={deleteSchoolInvoked}>
         Delete School
       </button>
