@@ -19,11 +19,11 @@ h2 {
 }
 
 .school_major {
-    color: #ebebee;
+    color: rgb(15, 15, 17);
 }
 
 .school_cost {
-    color: #ebebee;
+    color: rgb(15, 15, 17);
 }
 
 a:link {
@@ -34,6 +34,38 @@ a:link {
     color: lightgoldenrodyellow;
 }
 
-section {
-    background-color: rgb(11, 12, 6);
-  }
+form {
+    background-color: rgb(69, 78, 83);
+}
+
+#schoolListMapping {
+    background-color: rgb(215, 229, 236);
+}
+
+.schoolForm__title {
+    color: #ebebee;
+}
+
+.label_header_for_name {
+    color: #ebebee;
+}
+
+.label_header_for_logo {
+    color: #ebebee;
+}
+
+.label_header_for_subject {
+    color: #ebebee;
+}
+
+.label_header_for_cost {
+    color: #ebebee;
+}
+
+.label_header_for_link {
+    color: #ebebee;
+}
+
+.school__schoolName {
+    color: #07050f;
+}

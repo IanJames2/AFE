@@ -1,12 +1,10 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import "./School.css";
-// import { SchoolAppliedContext } from "../school/SchoolAppliedProvider";
 import { SchoolContext } from "./SchoolProvider";
-import { Link, useHistory, useParams } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 export const SchoolCard = ({ school }) => {
   const { deleteSchool } = useContext(SchoolContext);
-  // const { addAppliedSchool } = useContext(SchoolAppliedContext);
   const history = useHistory();
   const trashSchool = () => {
     deleteSchool(school.id).then(() => {
@@ -24,7 +22,7 @@ export const SchoolCard = ({ school }) => {
   // const appliedSchool = { ...appliedSchools };
 
 
-  //! IDK WHAT I'M DOING HERE.
+  //! Create a dropdown to add the school object to applied on the detail page.
   // const SubmitHandler = () => {
   //   while (appliedSchool.schoolId === "" || appliedSchool.applied === "") {
   //     while (appliedSchoolId) {
@@ -39,13 +37,6 @@ export const SchoolCard = ({ school }) => {
   //   }
   // };
 
-  // const Input = appliedSchool.schoolId === "" && appliedSchool.applied === "" 
-
-
-  // const SubmitHandler = event => {
-  //   setAppliedSchools(appliedSchool.concat(<Input key={appliedSchool.length} />))
-  // }
-
   return (
     <section className="school">
       <h3>
@@ -56,17 +47,6 @@ export const SchoolCard = ({ school }) => {
       <button className="delete_button" onClick={trashSchool}>
         Delete This School
       </button>
-      <div>
-          {/* <button
-            className="clickMe"
-            onClick={SubmitHandler}
-            onClick={() => {
-              history.push(`/schools/applied`);
-            }}
-          >
-            Click Here To Move This School To The Applied Section
-          </button> */}
-      </div>
     </section>
   );
 };

@@ -8,6 +8,7 @@ export const Logout = () => {
     }
 
     return (
+        
         <div>
             <Link to="/"><button onClick={clearUser} className="logout_button">Logout</button></Link>
         </div>

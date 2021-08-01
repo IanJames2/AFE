@@ -102,11 +102,6 @@ export const SchoolForm = () => {
       </h2>
       <fieldset>
         <div className="form-group">
-          {/* <label htmlFor="name">School Type:</label>
-            <input type="text" id="schoolTypeId" required autoFocus className="form-control" 
-            placeholder="Enter School Type" 
-            onChange={ChangeHandler} 
-            defaultValue={school.schoolTypeId}/> */}
           <select
             name="schoolType"
             id="schoolTypeId"
@@ -125,7 +120,7 @@ export const SchoolForm = () => {
       </fieldset>
       <fieldset>
         <div className="form-group">
-          <label htmlFor="name">School Logo:</label>
+          <label className="label_header_for_logo"htmlFor="name">School Logo:</label>
           <input
             type="text"
             id="logo"
@@ -140,7 +135,7 @@ export const SchoolForm = () => {
       </fieldset>
       <fieldset>
         <div className="form-group">
-          <label htmlFor="name">School Name:</label>
+          <label className="label_header_for_name" htmlFor="name">School Name:</label>
           <input
             type="text"
             id="institutionName"
@@ -155,7 +150,7 @@ export const SchoolForm = () => {
       </fieldset>
       <fieldset>
         <div className="form-group">
-          <label htmlFor="name">School Major:</label>
+          <label className="label_header_for_subject" htmlFor="name">School Major:</label>
           <input
             type="text"
             id="major"
@@ -170,7 +165,7 @@ export const SchoolForm = () => {
       </fieldset>
       <fieldset>
         <div className="form-group">
-          <label htmlFor="name">School Tuition Per Semester:</label>
+          <label className="label_header_for_cost" htmlFor="name">School Tuition Per Semester:</label>
           <input
             type="text"
             id="tuition"
@@ -185,7 +180,7 @@ export const SchoolForm = () => {
       </fieldset>
       <fieldset>
         <div className="form-group">
-          <label htmlFor="name">School Website Link:</label>
+          <label className="label_header_for_link" htmlFor="name">School Website Link:</label>
           <input
             type="text"
             id="websiteURL"
@@ -212,11 +207,4 @@ export const SchoolForm = () => {
   );
 };
 
-/*
-- 2
-- https://www.mtsu.edu/_resources/root_images/mt-logo-mtsu.svg
-- Middle Tennessee State University
-- Computer Science
-- 1,567
-- https://www.mtsu.edu/
-  */
+
