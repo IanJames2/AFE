@@ -13,6 +13,11 @@ export const SchoolAppliedProvider = (props) => {
         .then(setAppliedSchools)
     }
 
+    const getAppliedSchoolById = (id) => {
+        return fetch(`http://localhost:8088/appliedSchools/${id}?_expand=user&_expand=school`)
+        .then(res => res.json()) 
+    }
+
     const addAppliedSchool = appliedSchoolObj => {
         return fetch("http://localhost:8088/appliedSchools", {
             method: "POST",
@@ -31,6 +36,17 @@ export const SchoolAppliedProvider = (props) => {
           .then(getAppliedSchools)
     }
 
+    const updateAppliedSchool = (appliedSchool) => {
+        return fetch(`http://localhost:8088/appliedSchools/${appliedSchool.id}`, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(appliedSchool)
+        })
+          .then(getAppliedSchools)
+      }
+
     /*
         You return a context provider which has the
         `appliedSchools` state, `getAppliedSchools` function,
@@ -39,7 +55,7 @@ export const SchoolAppliedProvider = (props) => {
     */
     return (
         <SchoolAppliedContext.Provider value={{
-            appliedSchools, getAppliedSchools, addAppliedSchool, deleteAppliedSchool
+            appliedSchools, getAppliedSchools, getAppliedSchoolById,addAppliedSchool, deleteAppliedSchool, updateAppliedSchool
         }}>
             {props.children}
         </SchoolAppliedContext.Provider>

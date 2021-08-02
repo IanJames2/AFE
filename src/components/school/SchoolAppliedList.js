@@ -1,6 +1,7 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import "./School.css";
 import { SchoolAppliedContext } from "../school/SchoolAppliedProvider";
+
 import { SchoolAppliedCard } from "./SchoolAppliedCard";
 
 export const SchoolAppliedList = () => {
@@ -14,8 +15,7 @@ export const SchoolAppliedList = () => {
 
   return (
     <>
-            {/* <h2>List of Schools {schools.user.name} Has Applied For</h2> */}
-
+      {/* <h2>List of Schools {school.user.name} Has Applied For</h2> */}
       {appliedSchools.find(
         (school) => school.userId === parseInt(localStorage.getItem("afe_user"))
       ) ? (

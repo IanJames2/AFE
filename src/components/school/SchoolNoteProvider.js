@@ -5,20 +5,20 @@ export const SchoolNoteContext = createContext()
 
 // This component establishes what data can be used.
 export const SchoolNoteProvider = (props) => {
-    const [schools, setSchools] = useState([])
+    const [schoolNotes, setSchoolNotes] = useState([])
 
-    const getSchools = () => {
-        return fetch("http://localhost:8088/schools?_expand=user")
+    const getSchoolNotes = () => {
+        return fetch("http://localhost:8088/notes?_expand=school")
         .then(res => res.json())
-        .then(setSchools)
+        .then(setsetSchoolNotes)
     }
 
-    const getSchoolById = (id) => {
+    const getSchoolNoteById = (id) => {
         return fetch(`http://localhost:8088/schools/${id}?_expand=user&_expand=schoolType`)
         .then(res => res.json()) 
     }
 
-    const addSchool = schoolObj => {
+    const addSchoolNote = schoolNoteObj => {
         return fetch("http://localhost:8088/schools", {
             method: "POST",
             headers: {
@@ -29,14 +29,14 @@ export const SchoolNoteProvider = (props) => {
         .then(getSchools)
     }
 
-    const deleteSchool = schoolId => {
+    const deleteSchoolNote = schoolId => {
         return fetch(`http://localhost:8088/schools/${schoolId}`, {
           method: "DELETE"
         })
           .then(getSchools)
     }
 
-    const updateSchool = (school) => {
+    const updateSchoolNote = (school) => {
         return fetch(`http://localhost:8088/schools/${school.id}`, {
           method: "PUT",
           headers: {

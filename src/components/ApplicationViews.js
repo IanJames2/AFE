@@ -10,6 +10,7 @@ import { HomeButton } from "./HomeButton";
 import { SchoolAppliedList } from "./school/SchoolAppliedList";
 import { SchoolAppliedProvider } from "./school/SchoolAppliedProvider";
 import { SchoolNote } from "./school/SchoolNote";
+import { SchoolEnrollmentCheckBox } from "./school/SchoolEnrollmentCheckBox";
 
 export const ApplicationViews = () => {
   <Route>
@@ -41,6 +42,7 @@ export const ApplicationViews = () => {
               </Route>
               <Route path="/schools/applied">
                 <SchoolAppliedList></SchoolAppliedList>
+                <SchoolEnrollmentCheckBox></SchoolEnrollmentCheckBox>
               </Route>
             </SchoolProvider>
           </SchoolTypeProvider>
