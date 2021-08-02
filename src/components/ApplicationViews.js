@@ -9,6 +9,7 @@ import { SchoolTypeProvider } from "./school/SchoolTypeProvider";
 import { HomeButton } from "./HomeButton";
 import { SchoolAppliedList } from "./school/SchoolAppliedList";
 import { SchoolAppliedProvider } from "./school/SchoolAppliedProvider";
+import { SchoolNote } from "./school/SchoolNote";
 
 export const ApplicationViews = () => {
   <Route>
@@ -33,6 +34,7 @@ export const ApplicationViews = () => {
               </Route>
               <Route path="/schools/url/:schoolId(\d+)">
                 <SchoolDetail></SchoolDetail>
+                <SchoolNote></SchoolNote>
               </Route>
               <Route path="/schools/layout/:schoolId(\d+)">
                 <SchoolForm></SchoolForm>
