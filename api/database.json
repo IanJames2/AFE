@@ -38,6 +38,17 @@
       "websiteURL": "https://www.mtsu.edu/",
       "enrollment_status": false,
       "id": 2
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "schoolTypeId": 1,
+      "logo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcourse_report_production.s3.amazonaws.com%2Frich%2Frich_files%2Frich_files%2F3139%2Fs200%2Fnss-logo-compact.png&f=1&nofb=1",
+      "institutionName": "Nashville Software School",
+      "major": "Software Engineering",
+      "tuition": "14001",
+      "websiteURL": "https://nashvillesoftwareschool.com",
+      "enrollment_status": false
     }
   ],
   "schoolTypes": [
@@ -59,7 +70,7 @@
       "id": 1,
       "schoolId": 1,
       "userId": 1,
-      "applied": true 
+      "applied": true
     }
   ],
   "notes": [

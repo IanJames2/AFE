@@ -20,7 +20,7 @@ export const NavBar = () => {
       <li class="nav-item">
         <a class="nav-link" href="/add_a_school">Add A School To Your School List</a>
       </li>
-      <li class="nav-item dropdown">
+      {/* <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Select A School From Your List
         </a>
@@ -30,16 +30,23 @@ export const NavBar = () => {
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
-      </li>
+      </li> */}
       <li class="nav-item">
-        <a class="nav-link" href="/schools/applied">List Of Schools Applied For</a>
+        <a class="nav-link" href="/schools/applied">Applied Schools List</a>
       </li>
 
+      {/* <form class="form-inline my-2 my-lg-0">
+        <input
+          class="form-control mr-sm-2"
+          type="search"
+          placeholder="Search School Here"
+          aria-label="Search"
+        ></input>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+          Find A School
+        </button>
+      </form> */}
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></input>
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Find A School</button>
-    </form>
   </div>
 </nav>  
 </>

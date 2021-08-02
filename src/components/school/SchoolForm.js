@@ -15,7 +15,7 @@ export const SchoolForm = () => {
     logo: "",
     institutionName: "",
     major: "",
-    tuition: 0,
+    tuition: "",
     websiteURL: "",
   });
 
