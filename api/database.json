@@ -91,6 +91,18 @@
       "userId": 1,
       "content": "",
       "id": 3
+    },
+    {
+      "schoolId": 0,
+      "userId": 1,
+      "content": "",
+      "id": 4
+    },
+    {
+      "schoolId": 1,
+      "userId": 1,
+      "content": "Testing",
+      "id": 5
     }
   ]
 }
