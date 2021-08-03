@@ -1,10 +1,10 @@
 import React, { useContext, useState, useEffect } from "react";
 import { SchoolNoteContext } from "../school/SchoolNoteProvider";
-import { useHistory, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import "./SchoolNote.css";
 
 export const SchoolNote = ({school}) => {
-  const { notes, getNotes, addSchoolNote, updateSchoolNote, getSchoolNoteById } =
+  const { notes, getSchoolNotes, addSchoolNote, updateSchoolNote, getSchoolNoteById } =
     useContext(SchoolNoteContext);
 
   const [note, setNote] = useState({
@@ -15,8 +15,6 @@ export const SchoolNote = ({school}) => {
   const [isLoading, setIsLoading] = useState(false); //? Enables and disables the button
 
   const { noteId } = useParams(); //* Is an object
-
-  const history = useHistory();
 
   useEffect(() => {
     console.log("Use Effect For Note is working!");
@@ -40,7 +38,7 @@ export const SchoolNote = ({school}) => {
   };
 
   const SubmitHandler = () => {
-    if (note.notes === "") {
+    if (note.content === "") {
       window.alert(
         "Add notes in the textarea to save content for this school."
       );
@@ -56,7 +54,7 @@ export const SchoolNote = ({school}) => {
         };
         updateSchoolNote(upSchoolNoteObjs).then(() =>
           //? 🤔
-          getNotes()          
+          getSchoolNotes()          
         );
       } else {
         //!Add
@@ -65,7 +63,7 @@ export const SchoolNote = ({school}) => {
           userId: parseInt(localStorage.getItem("afe_user")),
           content: note.content,
         };
-        addSchoolNote(newSchoolNote).then(() => getNotes()          
+        addSchoolNote(newSchoolNote).then(() => getSchoolNotes()          
         );
       }
     }
@@ -83,12 +81,7 @@ export const SchoolNote = ({school}) => {
           name="comment"
           form="usrform"
           onChange={ChangeHandler}
-          defaultValue={notes.find(
-            (note) => note.userId === parseInt(localStorage.getItem("afe_user"))
-          ) ? ( note.content
-          ) : (
-            "Enter text here..."
-          )}
+          defaultValue={note.content}
         >
         </textarea>
         <button
