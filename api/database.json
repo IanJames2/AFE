@@ -103,6 +103,18 @@
       "userId": 1,
       "content": "Testing",
       "id": 5
+    },
+    {
+      "schoolId": 1,
+      "userId": 1,
+      "content": "Testing 123",
+      "id": 6
+    },
+    {
+      "schoolId": 1,
+      "userId": 1,
+      "content": "scw",
+      "id": 7
     }
   ]
 }
