@@ -1,8 +1,8 @@
 import React, { useContext, useEffect } from "react";
-import { SchoolContext } from "./SchoolProvider";
-import { SchoolCard } from "./SchoolCard";
 import { useHistory } from "react-router-dom";
 import "./School.css";
+import { SchoolCard } from "./SchoolCard";
+import { SchoolContext } from "./SchoolProvider";
 
 export const SchoolList = () => {
   const { schools, getSchools } = useContext(SchoolContext);

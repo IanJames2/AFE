@@ -77,7 +77,20 @@
     {
       "id": 1,
       "schoolId": 1,
+      "userId": 1,
       "content": "I am struggling with these stretch goals..."
+    },
+    {
+      "schoolId": 0,
+      "userId": 1,
+      "content": "",
+      "id": 2
+    },
+    {
+      "schoolId": 0,
+      "userId": 1,
+      "content": "",
+      "id": 3
     }
   ]
 }

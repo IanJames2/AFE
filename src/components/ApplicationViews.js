@@ -11,6 +11,7 @@ import { SchoolAppliedList } from "./school/SchoolAppliedList";
 import { SchoolAppliedProvider } from "./school/SchoolAppliedProvider";
 import { SchoolNote } from "./school/SchoolNote";
 import { SchoolEnrollmentCheckBox } from "./school/SchoolEnrollmentCheckBox";
+import { SchoolNoteProvider } from "./school/SchoolNoteProvider";
 
 export const ApplicationViews = () => {
   <Route>
@@ -23,31 +24,33 @@ export const ApplicationViews = () => {
   </Route>;
   return (
     <>
-      <SchoolAppliedProvider>
-        <UserProvider>
-          <SchoolTypeProvider>
-            <SchoolProvider>
-              <Route exact path="/">
-                <SchoolList></SchoolList>
-              </Route>
-              <Route path="/add_a_school">
-                <SchoolForm></SchoolForm>
-              </Route>
-              <Route path="/schools/url/:schoolId(\d+)">
-                <SchoolDetail></SchoolDetail>
-                <SchoolNote></SchoolNote>
-              </Route>
-              <Route path="/schools/layout/:schoolId(\d+)">
-                <SchoolForm></SchoolForm>
-              </Route>
-              <Route path="/schools/applied">
-                <SchoolAppliedList></SchoolAppliedList>
-                <SchoolEnrollmentCheckBox></SchoolEnrollmentCheckBox>
-              </Route>
-            </SchoolProvider>
-          </SchoolTypeProvider>
-        </UserProvider>
-      </SchoolAppliedProvider>
+      <SchoolNoteProvider>
+        <SchoolAppliedProvider>
+          <UserProvider>
+            <SchoolTypeProvider>
+              <SchoolProvider>
+                <Route exact path="/">
+                  <SchoolList></SchoolList>
+                </Route>
+                <Route path="/add_a_school">
+                  <SchoolForm></SchoolForm>
+                </Route>
+                <Route path="/schools/url/:schoolId(\d+)">
+                  <SchoolDetail></SchoolDetail>
+                  <SchoolNote></SchoolNote>
+                </Route>
+                <Route path="/schools/layout/:schoolId(\d+)">
+                  <SchoolForm></SchoolForm>
+                </Route>
+                <Route path="/schools/applied">
+                  <SchoolAppliedList></SchoolAppliedList>
+                  <SchoolEnrollmentCheckBox></SchoolEnrollmentCheckBox>
+                </Route>
+              </SchoolProvider>
+            </SchoolTypeProvider>
+          </UserProvider>
+        </SchoolAppliedProvider>
+      </SchoolNoteProvider>
     </>
   );
 };

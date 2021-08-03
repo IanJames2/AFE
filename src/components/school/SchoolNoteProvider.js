@@ -5,46 +5,46 @@ export const SchoolNoteContext = createContext()
 
 // This component establishes what data can be used.
 export const SchoolNoteProvider = (props) => {
-    const [schoolNotes, setSchoolNotes] = useState([])
+    const [notes, setNotes] = useState([])
 
     const getSchoolNotes = () => {
         return fetch("http://localhost:8088/notes?_expand=school")
         .then(res => res.json())
-        .then(setsetSchoolNotes)
+        .then(setNotes)
     }
 
     const getSchoolNoteById = (id) => {
-        return fetch(`http://localhost:8088/schools/${id}?_expand=user&_expand=schoolType`)
+        return fetch(`http://localhost:8088/notes/${id}?_expand=school&_expand=user`)
         .then(res => res.json()) 
     }
 
     const addSchoolNote = schoolNoteObj => {
-        return fetch("http://localhost:8088/schools", {
+        return fetch("http://localhost:8088/notes", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(schoolObj)
+            body: JSON.stringify(schoolNoteObj)
         })
-        .then(getSchools)
+        .then(getSchoolNotes)
     }
 
-    const deleteSchoolNote = schoolId => {
-        return fetch(`http://localhost:8088/schools/${schoolId}`, {
+    const deleteSchoolNote = noteId => {
+        return fetch(`http://localhost:8088/schools/${noteId}`, {
           method: "DELETE"
         })
-          .then(getSchools)
+          .then(getSchoolNotes)
     }
 
-    const updateSchoolNote = (school) => {
-        return fetch(`http://localhost:8088/schools/${school.id}`, {
+    const updateSchoolNote = (note) => {
+        return fetch(`http://localhost:8088/notes/${note.id}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json"
           },
-          body: JSON.stringify(school)
+          body: JSON.stringify(note)
         })
-          .then(getSchools)
+          .then(getSchoolNotes)
       }
 
     /*
@@ -54,10 +54,10 @@ export const SchoolNoteProvider = (props) => {
         allows any child elements to access them.
     */
     return (
-        <SchoolContext.Provider value={{
-            schools, getSchools, addSchool, getSchoolById, deleteSchool, updateSchool
+        <SchoolNoteContext.Provider value={{
+            notes, getSchoolNotes, addSchoolNote, getSchoolNoteById, deleteSchoolNote, updateSchoolNote
         }}>
             {props.children}
-        </SchoolContext.Provider>
+        </SchoolNoteContext.Provider>
     )
 }
