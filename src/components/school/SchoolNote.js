@@ -3,8 +3,8 @@ import { SchoolNoteContext } from "../school/SchoolNoteProvider";
 import { useHistory, useParams } from "react-router-dom";
 import "./SchoolNote.css";
 
-export const SchoolNote = () => {
-  const { notes, addSchoolNote, updateSchoolNote, getSchoolNoteById } =
+export const SchoolNote = ({school}) => {
+  const { notes, getNotes, addSchoolNote, updateSchoolNote, getSchoolNoteById } =
     useContext(SchoolNoteContext);
 
   const [note, setNote] = useState({
@@ -56,16 +56,17 @@ export const SchoolNote = () => {
         };
         updateSchoolNote(upSchoolNoteObjs).then(() =>
           //? 🤔
-          history.push(`/notes/${noteId}`).then(history.push(`/`))          
+          getNotes()          
         );
       } else {
         //!Add
         const newSchoolNote = {
-          schoolId: parseInt(note.schoolId),
+          schoolId: parseInt(school.id),
           userId: parseInt(localStorage.getItem("afe_user")),
           content: note.content,
         };
-        addSchoolNote(newSchoolNote).then(() => history.push("/"));
+        addSchoolNote(newSchoolNote).then(() => getNotes()          
+        );
       }
     }
   };
@@ -76,7 +77,7 @@ export const SchoolNote = () => {
 
       <form className="notes">
         <textarea
-          id="notes"
+          id="content"
           rows="9"
           cols="70"
           name="comment"
