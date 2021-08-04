@@ -12,6 +12,7 @@ import { SchoolAppliedProvider } from "./school/SchoolAppliedProvider";
 import { SchoolEnrollmentCheckBox } from "./school/SchoolEnrollmentCheckBox";
 import { SchoolNoteProvider } from "./school/SchoolNoteProvider";
 import { SchoolNoteList } from "./school/SchoolNoteList";
+import { SchoolNoteForm } from "./school/SchoolNoteForm";
 
 export const ApplicationViews = () => {
   <Route>

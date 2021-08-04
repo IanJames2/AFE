@@ -7,7 +7,7 @@ export const SchoolNoteContext = createContext()
 export const SchoolNoteProvider = (props) => {
     const [notes, setNotes] = useState([])
 
-    const getSchoolNotes = () => {
+    const getNotes = () => {
         return fetch("http://localhost:8088/notes?_expand=school")
         .then(res => res.json())
         .then(setNotes)
@@ -26,14 +26,14 @@ export const SchoolNoteProvider = (props) => {
             },
             body: JSON.stringify(schoolNoteObj)
         })
-        .then(getSchoolNotes)
+        .then(getNotes)
     }
 
     const deleteSchoolNote = noteId => {
-        return fetch(`http://localhost:8088/schools/${noteId}`, {
+        return fetch(`http://localhost:8088/notes/${noteId}`, {
           method: "DELETE"
         })
-          .then(getSchoolNotes)
+          .then(getNotes)
     }
 
     const updateSchoolNote = (note) => {
@@ -44,7 +44,7 @@ export const SchoolNoteProvider = (props) => {
           },
           body: JSON.stringify(note)
         })
-          .then(getSchoolNotes)
+          .then(getNotes)
       }
 
     /*
@@ -55,7 +55,7 @@ export const SchoolNoteProvider = (props) => {
     */
     return (
         <SchoolNoteContext.Provider value={{
-            notes, getSchoolNotes, addSchoolNote, getSchoolNoteById, deleteSchoolNote, updateSchoolNote
+            notes, getNotes, addSchoolNote, getSchoolNoteById, deleteSchoolNote, updateSchoolNote
         }}>
             {props.children}
         </SchoolNoteContext.Provider>

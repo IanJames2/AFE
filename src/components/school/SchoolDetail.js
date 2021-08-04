@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { SchoolContext } from "./SchoolProvider";
+import { SchoolNoteForm } from "./SchoolNoteForm";
 import "./School.css";
 import { useParams, useHistory } from "react-router-dom";
 
@@ -54,8 +55,8 @@ export const SchoolDetail = () => {
         >
           Edit
         </button>
+        <SchoolNoteForm school={school}></SchoolNoteForm>
     <section />
     </>
   );
 };
-  

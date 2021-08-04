@@ -1,10 +1,10 @@
 import React, { useContext, useState, useEffect } from "react";
-import { SchoolNoteContext } from "../school/SchoolNoteProvider";
+import { SchoolNoteContext } from "./SchoolNoteProvider";
 import { useParams } from "react-router-dom";
 import "./SchoolNote.css";
 
-export const SchoolNote = ({school}) => {
-  const { notes, getSchoolNotes, addSchoolNote, updateSchoolNote, getSchoolNoteById } =
+export const SchoolNoteForm = ({school}) => {
+  const { notes, getNotes, addSchoolNote, getSchoolNoteById, updateSchoolNote } =
     useContext(SchoolNoteContext);
 
   const [note, setNote] = useState({
@@ -38,7 +38,7 @@ export const SchoolNote = ({school}) => {
   };
 
   const SubmitHandler = () => {
-    if (note.content === "") {
+    if (note.notes === "") {
       window.alert(
         "Add notes in the textarea to save content for this school."
       );
@@ -54,7 +54,7 @@ export const SchoolNote = ({school}) => {
         };
         updateSchoolNote(upSchoolNoteObjs).then(() =>
           //? 🤔
-          getSchoolNotes()          
+          getNotes()          
         );
       } else {
         //!Add
@@ -63,7 +63,7 @@ export const SchoolNote = ({school}) => {
           userId: parseInt(localStorage.getItem("afe_user")),
           content: note.content,
         };
-        addSchoolNote(newSchoolNote).then(() => getSchoolNotes()          
+        addSchoolNote(newSchoolNote).then(() => getNotes().then(window.location.reload())      
         );
       }
     }
@@ -81,7 +81,6 @@ export const SchoolNote = ({school}) => {
           name="comment"
           form="usrform"
           onChange={ChangeHandler}
-          defaultValue={note.content}
         >
         </textarea>
         <button
