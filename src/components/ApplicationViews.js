@@ -9,9 +9,10 @@ import { SchoolTypeProvider } from "./school/SchoolTypeProvider";
 import { HomeButton } from "./HomeButton";
 import { SchoolAppliedList } from "./school/SchoolAppliedList";
 import { SchoolAppliedProvider } from "./school/SchoolAppliedProvider";
-import { SchoolNote } from "./school/SchoolNote";
 import { SchoolEnrollmentCheckBox } from "./school/SchoolEnrollmentCheckBox";
 import { SchoolNoteProvider } from "./school/SchoolNoteProvider";
+import { SchoolNoteList } from "./school/SchoolNoteList";
+import { SchoolNoteForm } from "./school/SchoolNoteForm";
 
 export const ApplicationViews = () => {
   <Route>
@@ -37,6 +38,7 @@ export const ApplicationViews = () => {
                 </Route>
                 <Route path="/schools/url/:schoolId(\d+)">
                   <SchoolDetail></SchoolDetail>
+                  <SchoolNoteList></SchoolNoteList>
                 </Route>
                 <Route path="/schools/layout/:schoolId(\d+)">
                   <SchoolForm></SchoolForm>
