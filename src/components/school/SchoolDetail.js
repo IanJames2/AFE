@@ -3,6 +3,7 @@ import { SchoolContext } from "./SchoolProvider";
 import { SchoolNoteForm } from "./SchoolNoteForm";
 import "./School.css";
 import { useParams, useHistory } from "react-router-dom";
+import { SchoolNoteList } from "./SchoolNoteList";
 
 export const SchoolDetail = () => {
   const { getSchoolById, deleteSchool } = useContext(SchoolContext);
@@ -55,7 +56,8 @@ export const SchoolDetail = () => {
         >
           Edit
         </button>
-        <SchoolNoteForm school={school}></SchoolNoteForm>
+        {/* <SchoolNoteList school={school}></SchoolNoteList> */}
+        {/* <SchoolNoteForm school={school}></SchoolNoteForm> */}
     <section />
     </>
   );

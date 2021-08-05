@@ -63,7 +63,7 @@
     {
       "id": 3,
       "name": "VetTec"
-    }
+    }   
   ],
   "appliedSchools": [
     {
@@ -79,42 +79,6 @@
       "schoolId": 1,
       "userId": 1,
       "content": "I am struggling with these stretch goals..."
-    }, 
-    {
-      "schoolId": 0,
-      "userId": 1,
-      "content": "",
-      "id": 2
-    },
-    {
-      "schoolId": 0,
-      "userId": 1,
-      "content": "",
-      "id": 3
-    },
-    {
-      "schoolId": 0,
-      "userId": 1,
-      "content": "",
-      "id": 4
-    },
-    {
-      "schoolId": 1,
-      "userId": 1,
-      "content": "Testing",
-      "id": 5
-    },
-    {
-      "schoolId": 1,
-      "userId": 1,
-      "content": "Testing 123",
-      "id": 6
-    },
-    {
-      "schoolId": 1,
-      "userId": 1,
-      "content": "scw",
-      "id": 7
     }
   ]
 }

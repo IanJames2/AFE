@@ -37,7 +37,6 @@ export const ApplicationViews = () => {
                   <SchoolForm></SchoolForm>
                 </Route>
                 <Route path="/schools/url/:schoolId(\d+)">
-                  <SchoolDetail></SchoolDetail>
                   <SchoolNoteList></SchoolNoteList>
                 </Route>
                 <Route path="/schools/layout/:schoolId(\d+)">
