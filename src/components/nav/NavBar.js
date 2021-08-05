@@ -31,9 +31,9 @@ export const NavBar = () => {
           <a className="dropdown-item" href="#">Something else here</a>
         </div>
       </li> */}
-      <li className="nav-item">
+      {/* <li className="nav-item">
         <a className="nav-link" href="/schools/applied">Applied Schools List</a>
-      </li>
+      </li> */}
 
       {/* <form className="form-inline my-2 my-lg-0">
         <input

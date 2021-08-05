@@ -5,12 +5,12 @@ import { useHistory, useParams } from "react-router-dom";
 
 //TODO: Must Finish
 export const SchoolAppliedForm = () => {
-  const { appliedSchools, addAppliedSchool, getAppliedSchools } = useContext(SchoolAppliedContext);
-
+  const { appliedSchools, addAppliedSchool, getAppliedSchools } =
+    useContext(SchoolAppliedContext);
 
   const [school, setSchool] = useState({
     schoolId: 0,
-    applied: true
+    applied: true,
   });
 
   const [isLoading, setIsLoading] = useState(false); //? Enables and disables the button
@@ -20,8 +20,8 @@ export const SchoolAppliedForm = () => {
   const history = useHistory();
 
   useEffect(() => {
-    console.log("USE EFFECT!!!!!!!!!!!!!!!!")
-    getAppliedSchools()
+    console.log("USE EFFECT!!!!!!!!!!!!!!!!");
+    getAppliedSchools();
     {
       if (schoolAppliedId) {
         getSchoolById(schoolAppliedId).then((school) => {
@@ -112,7 +112,7 @@ export const SchoolAppliedForm = () => {
 
       <button
         className="btn btn-primary"
-        disabled={isLoading} 
+        disabled={isLoading}
         onClick={(school) => {
           school.preventDefault();
           SubmitHandler();

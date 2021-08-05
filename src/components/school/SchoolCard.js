@@ -21,7 +21,6 @@ export const SchoolCard = ({ school }) => {
 
   // const appliedSchool = { ...appliedSchools };
 
-
   //! Create a dropdown to add the school object to applied on the detail page.
   // const SubmitHandler = () => {
   //   while (appliedSchool.schoolId === "" || appliedSchool.applied === "") {

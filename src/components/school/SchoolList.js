@@ -18,7 +18,7 @@ export const SchoolList = () => {
 
   return (
     <>
-      <form class="form-inline my-2 my-lg-0">
+      {/* <form class="form-inline my-2 my-lg-0">
         <input
           class="form-control mr-sm-2"
           type="search"
@@ -28,7 +28,7 @@ export const SchoolList = () => {
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
           Find A School
         </button>
-      </form>
+      </form> */}
       <p>  </p>
 
       <h2>List of Schools For Consideration</h2>
