@@ -10,7 +10,7 @@ class User(models.Model):
     updated_at = models.DateTimeField(auto_now = True)
 
     def __str__(self):
-        return self.email
+        return self.name
 
 class SchoolType(models.Model):
     name = models.CharField(max_length=50)
@@ -33,17 +33,18 @@ class School(models.Model):
     updated_at = models.DateTimeField(auto_now = True)
 
     def __str__(self):
-        return self.user
+        return self.institutionName
 
 class AppliedSchool(models.Model):
     school = models.ForeignKey(School, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+    comment = models.CharField(max_length=50, default="Add A Comment About Your Application. Please add your name after the comment.")
     applied = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now = True)
 
     def __str__(self):
-        return self.school
+        return self.comment
 
 class Note(models.Model):
     school = models.ForeignKey(School, on_delete=models.CASCADE)
@@ -52,5 +53,5 @@ class Note(models.Model):
     updated_at = models.DateTimeField(auto_now = True)
 
     def __str__(self):
-        return self.school
+        return self.content
 
