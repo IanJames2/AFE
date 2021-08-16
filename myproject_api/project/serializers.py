@@ -1,13 +1,19 @@
 # project/serializers.py
 from rest_framework import serializers
-from .models import Project
+from .models import User, Note
 
 
 class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
         fields = (
             'id',
-            'medium_url',
-            'description',
+            'email',
+            'name',
         )
-        model = Project
+    class Note:
+        fields = (
+            'id',
+            'school',
+            'content',
+        )
+        model = User, Note

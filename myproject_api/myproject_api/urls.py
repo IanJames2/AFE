@@ -16,9 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path # add include
 
-from . import views
-
 urlpatterns = [
-    path('', views.ListProject.as_view()),
-    path('<int:pk>/', views.DetailProject.as_view()),
+    path('admin/', admin.site.urls),
+    path('api/', include('project.urls')), #new line
 ]

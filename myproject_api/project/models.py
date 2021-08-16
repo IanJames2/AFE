@@ -1,21 +1,15 @@
 from django.db import models
-from datetime import date, datetime
-from time import strftime
 
 # Create your models here.
 class User(models.Model):
     email = models.EmailField(max_length=50)
     name = models.CharField(max_length=50)
-    created_at = models.DateTimeField(auto_now_add = True)
-    updated_at = models.DateTimeField(auto_now = True)
 
     def __str__(self):
         return self.name
 
 class SchoolType(models.Model):
     name = models.CharField(max_length=50)
-    created_at = models.DateTimeField(auto_now_add = True)
-    updated_at = models.DateTimeField(auto_now = True)
 
     def __str__(self):
         return self.name
@@ -29,8 +23,6 @@ class School(models.Model):
     tuition = models.IntegerField()
     websiteURL = models.CharField(max_length=50)
     enrollmentStatus = models.BooleanField(default=False)
-    created_at = models.DateTimeField(auto_now_add = True)
-    updated_at = models.DateTimeField(auto_now = True)
 
     def __str__(self):
         return self.institutionName
@@ -40,8 +32,6 @@ class AppliedSchool(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     comment = models.CharField(max_length=50, default="Add A Comment About Your Application. Please add your name after the comment.")
     applied = models.BooleanField(default=True)
-    created_at = models.DateTimeField(auto_now_add = True)
-    updated_at = models.DateTimeField(auto_now = True)
 
     def __str__(self):
         return self.comment
@@ -49,8 +39,6 @@ class AppliedSchool(models.Model):
 class Note(models.Model):
     school = models.ForeignKey(School, on_delete=models.CASCADE)
     content = models.TextField()
-    created_at = models.DateTimeField(auto_now_add = True)
-    updated_at = models.DateTimeField(auto_now = True)
 
     def __str__(self):
         return self.content
