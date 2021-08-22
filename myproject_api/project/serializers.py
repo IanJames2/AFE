@@ -4,16 +4,18 @@ from .models import User, Note
 
 
 class ProjectSerializer(serializers.ModelSerializer):
-    class Meta:
+    class Meta():
+        model = User
         fields = (
             'id',
             'email',
-            'name',
+            'name'
         )
+
     class Note:
-        fields = (
+        model = Note
+        fields = [
             'id',
             'school',
             'content',
-        )
-        model = User, Note
+        ]
